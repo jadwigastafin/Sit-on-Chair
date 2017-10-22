@@ -119,6 +119,8 @@ content: "";
 section.container.row {
   display: flex;
   position: relative;
+  width: 100%;
+
   background: rgba(255,255,255,1);
   background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 55%, rgba(199,195,199,1) 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(55%, rgba(246,246,246,1)), color-stop(100%, rgba(199,195,199,1)));
@@ -127,6 +129,7 @@ section.container.row {
   background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 55%, rgba(199,195,199,1) 100%);
   background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 55%, rgba(199,195,199,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c7c3c7', GradientType=0 );
+
 
 
   .col.img{
@@ -190,4 +193,59 @@ section.container.row {
   position: absolute;
   top: 260px;
   right: 12px;
+}
+
+// SEKCJA BOXES
+
+article {
+  div.col{
+    padding: 20px 20px 20px 0;
+    position: relative;
+
+    div.back{
+      width: 329px;
+      height: 60px;
+      background-color: rgba(255, 255, 255, .3);
+      position: absolute;
+      bottom: 40px;
+      border: none;
+    }
+
+    span{
+      font-weight: bold;
+      position: absolute;
+      bottom: 15px;
+      left: 10px;
+      font-size: 16px;
+      padding-right: 60px;
+
+      &::after{
+        content: "";
+        display: inline-block;
+        background: $primary-color;
+        height: 7px;
+        width: 20px;
+        padding-left: 180px;
+      }
+    }
+  }
+
+  div:last-of-type{
+    width: 32%;
+    height: 250px;
+    border: 1px solid lightgrey;
+    padding-top: 20px;
+
+    span{
+      font-weight: bold;
+      margin-top: 40px;
+      position: relative;
+
+    }
+
+    p{
+      padding: 10px;
+      font-size: 16px;
+    }
+  }
 }
