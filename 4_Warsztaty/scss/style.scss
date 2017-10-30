@@ -264,13 +264,15 @@ section.cennik {
 }
 
 
+
 .boxinfo {
   border: 2px solid grey;
   width: 30%;
-  height: 28em;
+  height: 26em;
   text-align: center;
   position: relative;
-  padding: 40px 20px;
+  float: left;
+  margin: 15px;
 }
 
 .boxinfo::before {
@@ -289,10 +291,11 @@ section.cennik {
 }
 
 .boxinfo h3 {
-  padding-bottom: 15px;
-  padding-top: 15px;
+  padding-bottom: 30px;
+  padding-top: 40px;
   color: $primary-color;
   text-transform: uppercase;
+
 }
 
 .boxinfo a {
@@ -304,6 +307,98 @@ section.cennik {
   border-radius: 10px;
   display: inline-block;
   text-decoration: none;
+  position: relative;
+  top: 70px;
+}
+.boxinfo .circle {
+  border: 2px solid grey;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin: auto;
+  padding: 30px 0;
+  margin-bottom: 30px;
+
+  p{
+    color: grey;
+  }
+
+  p:first-of-type {
+    padding-top: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+
+    sup {
+      font-size: 16px;
+    }
+  }
+
+  p:nth-of-type(2){
+    font-size: 16px;
+    font-weight: bold;
+
+  }
+
 }
 
+div.boxinfo.basic, .advance{
+  p.zakup, .gwarancja {
+    font-size: 20px;
+    background: $gray-color;
+    margin: 0;
+    padding: 5px;
+    color: dimgrey;
+  }
+  p.serwis, .porady {
+    background: $lightengray-color;
+    padding: 5px;
+    color: dimgrey;
+  }
+
+}
+
+div.boxinfo.advance{
+  a{
+    top: 5px;
+  }
+}
+
+div.boxinfo.standard{
+  background: $primary-color;
+  border-color: $primary-color;
+
+  &::before{
+  background-color: white;
+    border-color: $primary-color;
+    box-shadow: 0 0 0 10px $primary-color inset;
+}
+
+  .circle{
+    background-color: white;
+    border-color: white;
+
+    p{
+      color: $primary-color;
+    }
+  }
+
+  a{
+    background-color: white;
+    color: $primary-color;
+    top: 40px;
+  }
+  .zakup{
+    background-color: white;
+    padding: 5px;
+  }
+  .serwis{
+    background-color: $lightengray-color;
+    padding: 5px;
+  }
+  .gwarancja{
+    background-color: white;
+    padding: 5px;
+  }
+}
 
