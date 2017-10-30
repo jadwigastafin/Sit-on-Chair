@@ -116,9 +116,7 @@ content: "";
 
     // SEKCJA WELCOME
 
-section.container.row {
-  display: flex;
-  position: relative;
+section#welcome {
   width: 100%;
 
   background: rgba(255,255,255,1);
@@ -130,7 +128,13 @@ section.container.row {
   background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 55%, rgba(199,195,199,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c7c3c7', GradientType=0 );
 
+}
 
+
+section.container.row {
+  display: flex;
+  position: relative;
+  width: 100%;
 
   .col.img{
     width: 40%;
@@ -198,6 +202,7 @@ section.container.row {
 // SEKCJA BOXES
 
 article {
+
   div.col{
     padding: 20px 20px 20px 0;
     position: relative;
@@ -224,8 +229,9 @@ article {
         display: inline-block;
         background: $primary-color;
         height: 7px;
-        width: 20px;
-        padding-left: 180px;
+        width: 200px;
+        position: relative;
+        bottom: 10px;
       }
     }
   }
@@ -249,3 +255,55 @@ article {
     }
   }
 }
+
+// SEKCJA PRICES
+
+section.cennik {
+  width: 100%;
+  background: whitesmoke;
+}
+
+
+.boxinfo {
+  border: 2px solid grey;
+  width: 30%;
+  height: 28em;
+  text-align: center;
+  position: relative;
+  padding: 40px 20px;
+}
+
+.boxinfo::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid grey;
+  background-color: grey;
+  box-sizing: border-box;
+  box-shadow: 0 0 0 10px white inset;
+  position: absolute;
+  top: -25px;
+  left: calc(50% - 25px);
+}
+
+.boxinfo h3 {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  color: $primary-color;
+  text-transform: uppercase;
+}
+
+.boxinfo a {
+  background: $primary-color;
+  color: white;
+  text-transform: uppercase;
+  padding: 5px 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+
