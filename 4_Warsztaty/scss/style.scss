@@ -260,7 +260,27 @@ article {
 
 section.cennik {
   width: 100%;
-  background: whitesmoke;
+  background: $lightengray-color;
+
+  p.prices{
+
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 40px 20px;
+    padding-top: 40px;
+
+  &::after{
+    content: "";
+    display: inline-block;
+    background: $primary-color;
+    height: 7px;
+    width: 200px;
+    position: relative;
+    top: 15px;
+    right: 75px;
+
+  }
+  }
 }
 
 
@@ -343,12 +363,14 @@ section.cennik {
 }
 
 div.boxinfo.basic, .advance{
+  background-color: white;
   p.zakup, .gwarancja {
     font-size: 20px;
     background: $gray-color;
     margin: 0;
     padding: 5px;
     color: dimgrey;
+
   }
   p.serwis, .porady {
     background: $lightengray-color;
