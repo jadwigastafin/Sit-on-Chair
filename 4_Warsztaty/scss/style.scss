@@ -474,7 +474,7 @@ section.contact {
 
   button {
     text-transform: uppercase;
-    padding: 10px 85px;
+    padding: 20px 110px;
     border-radius: 10px;
     font-size: 30px;
     font-weight: bold;
@@ -489,6 +489,7 @@ section.contact {
     display: inline-block;
     padding: 40px 10px;
     color: $gray-color;
+    font-size: 18px;
   }
 
   img.red{
@@ -497,8 +498,40 @@ section.contact {
   }
 
   div.col:nth-of-type(2){
-    margin-left: 50px;
+    margin-left: 100px;
   }
 
 }
+
+footer {
+  margin-top: 50px;
+
+  .col:first-of-type{
+    float: left;
+    p{
+      margin-top: 70px;
+      font-size: 18px;
+      color: dimgrey;
+    }
+  }
+  .col {
+    float: right;
+  }
+
+  span{
+    padding: 20px;
+    margin: 50px;
+    text-transform: uppercase;
+    color: dimgrey;
+  }
+  ul{
+    margin-top: 60px;
+
+
+  li{
+      display: inline-block;
+    }
+  }
+}
+
 
