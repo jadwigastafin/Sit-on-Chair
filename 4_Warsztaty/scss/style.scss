@@ -42,6 +42,7 @@
   max-width: 1200px;
   padding-left: 10px;
   padding-right: 10px;
+  position: relative;
 }
 
       // SEKCJA HEADER
@@ -50,6 +51,34 @@ header {
   background-color: black;
   color: white;
   text-transform: uppercase;
+
+  //div.triangle {
+  //  border-top: 25px solid transparent;
+  //  border-right: 25px solid transparent;
+  //  border-bottom: 25px solid black;
+  //  border-left: 25px solid transparent;
+  //  position: absolute;
+  //  display: none;
+  //
+  //  &.one{
+  //    left: 60%;
+  //    top: 40px;
+  //    display: block;
+  //    &:hover{
+  //      display: block;
+  //      z-index: 2;
+  //      padding: 80px;
+  //    }
+  //  }
+  //  &.two{
+  //    left: 75%;
+  //    top: 40px;
+  //  }
+  //  &.three{
+  //    left: 89%;
+  //    top: 40px;
+  //  }
+  //}
   
   span.col {
     float: left;
@@ -89,6 +118,7 @@ header {
 
     a {
       text-transform: none;
+
     }
   }
 
@@ -104,10 +134,20 @@ header {
     color: white;
     font-weight: bold;
     letter-spacing: 2px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 20px;
   }
+
+  li:hover{
+    background-color: rgb(57, 57, 57);
+  }
+
+
 }
+
+
+
+
+
 
 .clearfix {
 clear: both;
@@ -118,6 +158,7 @@ content: "";
 
 section#welcome {
   width: 100%;
+  margin-bottom: 30px;
 
   background: rgba(255,255,255,1);
   background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 55%, rgba(199,195,199,1) 100%);
@@ -135,15 +176,14 @@ section.container.row {
   display: flex;
   position: relative;
   width: 100%;
+  margin-bottom: 30px;
+
 
   .col.img{
     width: 40%;
     padding-top: 80px;
 
-    img{
-      width: 564px;
-      height: 405px;
-    }
+
   }
 
   .col.sentence{
@@ -174,6 +214,10 @@ section.container.row {
       color: white;
       background-color: $primary-color;
       border: none;
+      cursor: pointer;
+      &:hover{
+        background-color: $primary-color-hover;
+      }
     }
   }
 }
@@ -185,7 +229,8 @@ section.container.row {
   border-bottom: 5px solid $primary-color;
   transform: rotate(45deg);
   position: absolute;
-  top: 260px;
+  top: 240px;
+  cursor: pointer;
 }
 
 #rightArrow {
@@ -195,9 +240,25 @@ section.container.row {
   border-bottom: 5px solid $primary-color;
   transform: rotate(225deg);
   position: absolute;
-  top: 260px;
+  top: 240px;
   right: 12px;
+  cursor: pointer;
 }
+
+//SLIDER *****************
+
+.slider {
+  list-style: none;
+  width: 470px;
+  height: 337px;
+}
+.slider li{
+  display: none;
+}
+.slider .visible{
+  display: inline-block;
+}
+
 
 // SEKCJA BOXES
 
@@ -206,6 +267,12 @@ article {
   div.col{
     padding: 20px 20px 20px 0;
     position: relative;
+    
+    &:hover{
+      div.back{
+        display: none;
+      }
+    }
 
     div.back{
       width: 329px;
@@ -330,6 +397,9 @@ section.cennik {
   text-decoration: none;
   position: relative;
   top: 70px;
+  &:hover{
+    background-color: $primary-color-hover;
+  }
 }
 .boxinfo .circle {
   border: 2px solid grey;
@@ -414,6 +484,9 @@ div.boxinfo.standard{
     background-color: white;
     color: $primary-color;
     top: 40px;
+    &:hover{
+      background-color: $lightengray-color;
+    }
   }
   .zakup{
     background-color: white;
@@ -462,10 +535,10 @@ section.contact {
   }
 
   form {
-    input, textarea{
+    input, textarea {
       border: 1px solid $primary-color;
       font-size: 30px;
-      color: $lightengray-color;
+      color: black;
       padding: 10px;
       margin: 10px;
       width: 660px;
@@ -481,9 +554,14 @@ section.contact {
     color: white;
     background-color: $primary-color;
     border: none;
+    cursor: pointer;
+    &:hover{
+      background-color: $primary-color-hover;
+    }
   }
   img.ok{
     border: 1px solid $primary-color;
+    cursor: pointer;
   }
   p.ok{
     display: inline-block;
@@ -530,6 +608,7 @@ footer {
 
   li{
       display: inline-block;
+      cursor: pointer;
     }
   }
 }
